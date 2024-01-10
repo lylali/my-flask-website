@@ -1,0 +1,102 @@
+{% extends "base.html" %} 
+
+{% block head %}
+<link
+  href="{{ url_for('static', filename = 'css/styles.css') }}"
+  rel="stylesheet"
+/>
+{% endblock %} 
+
+{% block body %}
+<header
+  class="masthead"
+  style="background-image: url('static/images/posts/contact-bg.jpeg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          {% if feedback %}
+          <h1>{{ feedback }}</h1>
+          {% else %}
+          <h1>Contact Me</h1>
+          {% endif %}
+          <span class="subheading">Should you wish to reply, share thoughts that arise,
+            <br>
+            I promise each word will meet attentive eyes.
+            <br>
+            Remember ——
+            <br>
+            <i>"If this fall into thy hand, revolve."</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <p class="highlight-text d-inline-flex">Leave me a message! I'll get back to you ASAP! 🚀</p>
+        <div class="my-5">
+          <!-- flash messages  -->
+          <div>
+            {% with messages = get_flashed_messages(with_categories=true) %} {% if
+            messages %} {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %} {% endif %} {% endwith %}
+          </div>
+
+          <form id="contactForm" name="sentMessage" method="post">
+            <div class="form-floating">
+              <input
+                class="form-control"
+                style="font-size: 23px;"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name..."
+                required
+              />
+              <label for="name">Name</label>
+            </div>
+            <div class="form-floating">
+              <input
+                class="form-control"
+                style="font-size: 23px;"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter your email..."
+                required
+              />
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Enter your message here..."
+                required
+                style="height: 15rem; font-size: 23px;"
+              ></textarea>
+              <label for="message">Message</label>
+            </div>
+             
+            <br />
+            <button class="btn btn-primary" id="submitButton" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

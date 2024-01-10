@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% from "bootstrap5/form.html" import render_form %}
+
+{% block head %}
+        <link href="{{ url_for('static', filename = 'css/styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url({{post.img_url}})">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <h1>{{ post.title }}</h1>
+          <span class="meta">Posted by {{ post.author.username }} on {{ post.date.strftime("%Y-%m-%d")}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Post Content -->
+<article>
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        {{ post.body|safe }}
+
+        <div class="d-flex mb-5">
+          {% if current_user == post.author %}
+          <a class="btn btn-primary float-left" href="{{url_for('edit_post', post_id=post.id)}}">Edit Post</a>
+          <a class="btn btn-delete btn-outline-dark ms-auto" href="{{url_for('delete_post', post_id=post.id) }}">Delete Post</a>
+          {% endif %}
+        </div>  
+
+
+
+<!-- Comments Area -->
+
+        <div class="mt-4 border-top">
+
+          <!-- flash messages  -->
+        <div>
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+              {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">
+                      {{ message }}
+                  </div>
+              {% endfor %}
+          {% endif %}
+          {% endwith %}
+        </div>
+        
+        <h4 class="highlight-text d-inline-flex mt-4" id="comment-box">Leave a Comment!</h4>
+        
+        {{ ckeditor.load(pkg_type="basic") }}
+        {{ ckeditor.config(name='comment_text') }}
+        {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+        <div class="comment">
+          <ul class="commentList">
+            {% for comment in post.comments: %}
+            <li>
+              <div class="commenterImage">
+                <img src="{{ gravatar_url(comment.comment_author.email) }}">
+              </div>
+              <div class="commentText">
+                {{comment.body|safe}}
+                <span class="sub-text">{{comment.comment_author.username}}</span>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock %}
