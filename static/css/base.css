@@ -1,13 +1,9 @@
-body:lang(en) {
-  font-family: 'Cormorant Garamond', serif;
-}
-
-body:lang(zh) {
-  font-family: 'Noto Serif SC', serif;
+body {
+  font-family: 'Noto Serif SC', 'Cormorant Garamond', serif;
 }
 
 h1, h2, h4{
-  font-family: 'Young Serif', serif;
+  font-family: 'Noto Serif SC', 'Young Serif', serif;
 }
 
 .navbar-brand {
