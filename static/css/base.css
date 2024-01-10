@@ -1,5 +1,9 @@
-body {
+body:lang(en) {
   font-family: 'Cormorant Garamond', serif;
+}
+
+body:lang(zh) {
+  font-family: 'Noto Serif SC', serif;
 }
 
 h1, h2, h4{
