@@ -1,11 +1,12 @@
 {% extends "base.html" %}
     {% block head %}
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ url_for('static', filename = 'css/styles.css') }}" rel="stylesheet">
     {% endblock %}
 
+<!-- The following HTML code is adapted from the "about.html" file created by Start Bootstrap. -->
+<!-- Original source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/about.html -->
+
     {% block body %}
-        <!-- Page Header-->
         <header class="masthead" style="background-image: url('static/images/posts/about-bg.jpg')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -19,7 +20,7 @@
             </div>
         </header>
 
-           <!-- flash messages  -->
+        <!-- flash messages  -->
         <div>
             {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -32,7 +33,6 @@
             {% endwith %}
        </div>
 
-        <!-- Main Content-->
         <main class="mb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">

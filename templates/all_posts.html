@@ -1,64 +1,56 @@
 {% extends "base.html" %}
     {% block head %}
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ url_for('static', filename = 'css/styles.css') }}" rel="stylesheet">
     {% endblock %}
 
+<!-- The following HTML code is adapted from the "index.html" file created by Start Bootstrap. -->
+<!-- Original source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/index.html -->
+
     {% block body %}
-
-<!-- Page Header-->
-<header
-  class="masthead"
-  style="background-image: url('../static/images/posts/blog-bg.jpg')"
->
-  <div class="container position-relative px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-md-10 col-lg-8 col-xl-7">
-        <div class="site-heading">
-          <h1>Blog</h1>
-          <span class="subheading">Hi, welcome to Lyla's land.<br> It's a vision, a walking dream<br> 
-            Fled is that music – <br>
-            I walk and I sleep</span>
+      <header
+        class="masthead"
+        style="background-image: url('../static/images/posts/blog-bg.jpg')"
+      >
+        <div class="container position-relative px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="site-heading">
+                <h1>Blog</h1>
+                <span class="subheading">Hi, welcome to Lyla's land.<br> It's a vision, a walking dream<br> 
+                  Fled is that music – <br>
+                  I walk and I sleep</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</header>
+      </header>
 
-<!-- Main Content-->
-<div class="container px-4 px-lg-5">
-  <div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-md-10 col-lg-8 col-xl-7">
-      <!-- flash messages  -->
-      <div>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            {% for category, message in messages %}
-                <div class="alert alert-{{ category }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-      </div>
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- flash messages  -->
+            <div>
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                  {% for category, message in messages %}
+                      <div class="alert alert-{{ category }}">
+                          {{ message }}
+                      </div>
+                  {% endfor %}
+              {% endif %}
+              {% endwith %}
+            </div>
 
-      <!-- Post preview-->
       {% for post in all_posts %}
-      <div class="post-preview">
-        <a href="{{ url_for('get_post', post_id=post.id) }}">
-          <h2 class="post-title">{{ post.title }}</h2>
-        </a>
-        <p class="post-meta">
-          Posted by {{post.author.username}} on {{post.date.strftime("%Y-%m-%d") }}
-  
-
-        </p>
-      </div>
-      <hr class="my-4" />
+        <div class="post-preview">
+          <a href="{{ url_for('get_post', post_id=post.id) }}">
+            <h2 class="post-title">{{ post.title }}</h2>
+          </a>
+          <p class="post-meta">
+            Posted by {{post.author.username}} on {{post.date.strftime("%Y-%m-%d") }}</p>
+        </div>
+        <hr class="my-4" />
       {% endfor %}
-
-
-      
 
       <!-- pagination -->
       {% for page_index in all_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
@@ -76,9 +68,8 @@
 
       <div class="d-flex justify-content-end mb-4">
         {% if current_user.is_admin %}
-        <a class="btn btn-primary float-right" href="{{url_for('create_new_post')}}">Create New Post</a>
+          <a class="btn btn-primary float-right" href="{{url_for('create_new_post')}}">Create New Post</a>
         {% endif %}
-
       </div>
   
       

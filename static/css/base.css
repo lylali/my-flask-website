@@ -32,7 +32,6 @@ h1, h2, h4{
   transition: background-size 0.3s; 
 }
 
-/* To change background size on hover */
 .nav-link:hover {
   background-size: 100% 100%;
 }

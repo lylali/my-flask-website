@@ -1,5 +1,10 @@
+
+/*
+  The following JavaScript codes are adapted from the "home.js" file created by Rish Bhardwaj.
+  Original source: https://github.com/crearo/portfolio/blob/main/static/js/home.js
+*/
+
 $(function() {
-  /* NOTE: hard-refresh the browser once you've updated this */
   $(".typed").typed({
     strings: [
       "welcome!<br/>" +

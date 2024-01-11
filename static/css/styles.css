@@ -14,6 +14,51 @@ p a {
   text-decoration: underline;
 }
 
+
+
+.btn {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 5px 15px;
+  letter-spacing: 1px;  
+  font-family: 'Young Serif', serif;
+}
+
+.btn-primary {
+  background-color: #304D30 !important;
+  border-color: #304D30 !important;
+}
+
+.btn-page {
+  font-size:22px;
+  font-weight: 800;
+  padding: 1px 12px;
+  border-radius: 0;
+}
+
+
+
+.btn-outline-dark:hover {
+  background-color: #262626cc;
+}
+
+
+.btn-primary:hover{
+  color:#304D30 !important;
+  background-color: #fff !important;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 25px 35px;
+}
+
+/* 
+The following styles were inspired by the "styles.css" file by Start Bootstrap
+Source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/css/styles.css 
+*/
+
+
 blockquote {
   font-style: italic;
   color: #6c757d;
@@ -36,8 +81,6 @@ blockquote {
 .form-floating label {
   color: #6c757d;
 }
-
-
 
 header.masthead {
   position: relative;
@@ -121,7 +164,6 @@ header.masthead .post-heading .meta a {
 }
 
 
-
 .caption {
   font-size: 0.875rem;
   font-style: italic;
@@ -163,7 +205,6 @@ header.masthead .post-heading .meta a {
 }
 
 
-/* Commment Styling */
 .commentBox {
   padding:10px;
   border-top:1px dotted #bbb;
@@ -212,41 +253,4 @@ header.masthead .post-heading .meta a {
 }
 
 
-
-.btn {
-  font-size: 18px;
-  font-weight: 800;
-  padding: 5px 15px;
-  letter-spacing: 1px;  
-  font-family: 'Young Serif', serif;
-}
-
-.btn-primary {
-  background-color: #304D30 !important;
-  border-color: #304D30 !important;
-}
-
-.btn-page {
-  font-size:22px;
-  font-weight: 800;
-  padding: 1px 12px;
-  border-radius: 0;
-}
-
-
-
-.btn-outline-dark:hover {
-  background-color: #262626cc;
-}
-
-
-.btn-primary:hover{
-  color:#304D30 !important;
-  background-color: #fff !important;
-}
-
-.btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
-}
 

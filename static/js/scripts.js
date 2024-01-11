@@ -1,8 +1,8 @@
-/*!
-* Start Bootstrap - Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
+/*
+  The following JavaScript codes are adapted from the "scripts.js" file created by Start Bootstrap.
+  Original source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/js/scripts.js
 */
+
 window.addEventListener('DOMContentLoaded', () => {
     let scrollPos = 0;
     const mainNav = document.getElementById('mainNav');

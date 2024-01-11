@@ -7,6 +7,14 @@ body {
 }
 
 
+/*
+The following css codes are based on a modified version of the "home.css" created by Rish Bhardwaj.
+The main changes include removing the styles I don't need, only kept the styling for the dynamic terminal on my home page,
+and customizing some parameters to fit in my website design.
+Original source: https://github.com/crearo/portfolio/blob/main/static/css/home.css
+*/
+
+
 .top-text{
     min-height: calc(100vh - 128px);
     display: flex;

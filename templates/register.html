@@ -4,7 +4,11 @@
 {% endblock %}
 {% extends "base.html" %}
 {% block body %} 
-<!-- Page Header -->
+
+<!-- The following HTML code is adapted from the "post.html" file created by Start Bootstrap. -->
+<!-- Original source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/post.html -->
+
+
 <header
   class="masthead"
   style="background-image: url('../static/images/user/register-bg.jpg')">
@@ -19,8 +23,6 @@
     </div>
   </div>
 </header>
-
-
 
 
 <main class="mb-4">
@@ -39,7 +41,6 @@
           {% endif %}
           {% endwith %}
         </div>
-
         {{ render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
       </div>
     </div>

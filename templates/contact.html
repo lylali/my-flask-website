@@ -2,12 +2,15 @@
 
 {% block head %}
 <link
-  href="{{ url_for('static', filename = 'css/styles.css') }}"
-  rel="stylesheet"
-/>
+  href="{{ url_for('static', filename = 'css/styles.css') }}" rel="stylesheet"/>
 {% endblock %} 
 
 {% block body %}
+
+<!-- The following HTML code is adapted from the "contact.html" file created by Start Bootstrap. -->
+<!-- Original source: https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/dist/contact.html -->
+
+
 <header
   class="masthead"
   style="background-image: url('static/images/posts/contact-bg.jpeg')"
@@ -35,9 +38,6 @@
 </header>
 
 
-
-
-<!-- Main Content-->
 <main class="mb-4">
   <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
