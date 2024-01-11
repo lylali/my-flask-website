@@ -1,0 +1,5 @@
+Greetings, I'm Lyla, a current MSc Computing student at Cardiff University. My academic journey began in Business, veering into programming during my undergrad. Through my current course and previous learning experience, I've honed skills in Python, JS, HTML, and CSS, aiming to specialize in Python development.
+
+Outside academia, I enjoy hiking, gaming, and writing, with published short stories and poems. My linguistic prowess spans Mandarin, English, and intermediate French. I thrive in outdoor activities, disfavoring traditional gyms.
+
+Join me on this diverse journey through code, nature, and the human experience, where life's intricate symphony unfolds.

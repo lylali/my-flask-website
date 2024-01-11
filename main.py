@@ -140,11 +140,15 @@ with app.app_context():
 # home, about and contact routes
 @app.route("/")
 def home():
-    return render_template("home.html")
+    with open('text/home.txt', 'r') as f:
+        lines = f.readlines()   
+    return render_template("home.html", lines=lines)
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    with open('text/about.txt', 'r') as f:
+        lines = f.readlines()
+    return render_template("about.html", lines=lines)
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():

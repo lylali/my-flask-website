@@ -1,0 +1,17 @@
+Greetings, esteemed visitors! I am Lyla, a current student of MSc in Computing program at Cardiff University. My academic voyage has been a fascinating one, with an initial undergraduate degree in Business and a year-long professional stint in the world of marketing. 
+
+However, fate had different plans for me, as I embarked on a journey into the realm of programming during my undergraduate years. I delved into the intricacies of data analysis first to meet the requirements of my business degree and I managed to secure an internship as data analyst intern at Volvo Cars. Then I found out my true interest was in software development so I enrolled in my current Master’s course where I've cultivated a versatile proficiency in web development, from the alchemy of back-end programming to the artistry of front-end design. Presently, my aspirations center around a career as a Python developer.
+
+Beyond the digital landscapes, my personal interests encompass a diverse array of pursuits. In my leisure hours, I find solace in the embrace of nature through hiking, indulge in strategic games, immerse myself in the written word, and engage in the craft of writing. Notably, I have had the privilege of having my short stories and poems published in Chinese magazines. As an ongoing endeavor, I am committed to mastering the art of composing English poetry.
+
+My linguistic prowess extends beyond the realm of code, as I am proficient in Mandarin, fluent in English, and possess an intermediate command of the French language. I view languages as the living essence of culture, and I am continually expanding my linguistic horizons.
+
+As for physical pursuits, my love for the outdoors is evident in my penchant for activities such as hiking, surfing, and mountain climbing. I have an aversion to traditional gyms, preferring the exhilaration of natural landscapes and the challenges they present.
+
+In the grand tapestry of life, I hold the belief that success is not solely measured in monetary terms. Instead, I prioritize the pursuit of happiness and the enjoyment of life's rich experiences. While I am cognizant of my Chinese heritage, which places a strong emphasis on diligence, I hold the conviction that life's true essence lies in the pursuit of happiness.
+
+Art in its various forms holds a special place in my heart. Music, as a profound medium of expression, resonates deeply with me. The cinematic realm fascinates me to such an extent that I immerse myself in the complete works of select directors and offer discerning critiques on their intellectual and aesthetic merits. In poetry, I discover a wellspring of curiosity, excitement, and a renewed appreciation for the everyday.
+
+In addition to my affinity for the arts, I derive immense pleasure from the simple joys of existence – the renewal of life in spring, the warmth of a sunlit day, the refreshing taste of iced beverages, the glistening stones in a flowing river, and the enduring yearning for the innocence of youth and the impulse to cherish the present.
+
+In conclusion, I invite you to join me on this multifaceted journey through the realms of code, nature, and the complexities of existence. Life, in its infinite wisdom, is both the conductor and composer of our unique symphony, and I am dedicated to savoring every note with discernment and appreciation.

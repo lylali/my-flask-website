@@ -1,9 +1,9 @@
 body {
-  font-family: 'Noto Serif SC', 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
 }
 
 h1, h2, h4{
-  font-family: 'Noto Serif SC', 'Young Serif', serif;
+  font-family: 'Young Serif', 'Noto Serif SC', serif;
 }
 
 .navbar-brand {
