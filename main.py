@@ -155,9 +155,9 @@ def about():
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
         subject = f"New Message from {name}"
         body = f"Email: {email}\nMessage: {message}"
         email_recipient = os.environ.get('RECIPIENT_EMAIL')
