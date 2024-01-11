@@ -10,11 +10,6 @@ p {
   font-size: 150%;
 }
 
-p a {
-  text-decoration: underline;
-}
-
-
 
 .btn {
   font-size: 18px;
@@ -80,7 +75,9 @@ blockquote {
 }
 .form-floating label {
   color: #6c757d;
+  font-size: 120%;
 }
+
 
 header.masthead {
   position: relative;
