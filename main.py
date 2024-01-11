@@ -69,6 +69,8 @@ with app.app_context():
 
 
 # adding profiles images
+# current version of flask_gravatar is not compatible with current version of Flask, found substitute solution on Github.
+# below function is taken from https://github.com/zzzsochi/Flask-Gravatar/issues/31#issuecomment-1818098438, created by user animitchel.
 def gravatar_url(email, size=100, rating='g', default='retro', force_default=False):
     hash_value = md5(email.lower().encode('utf-8')).hexdigest()
     return f"https://www.gravatar.com/avatar/{hash_value}?s={size}&d={default}&r={rating}&f={force_default}"
