@@ -20,7 +20,7 @@ from forms import PostForm, RegistrationForm, LoginForm, CommentForm, RequestRes
 app = Flask(__name__)
 
 # configurations
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(os.getcwd(), 'instance/project.db')
 
 
