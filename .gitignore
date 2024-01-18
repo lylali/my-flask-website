@@ -12,7 +12,7 @@ node_modules/
 *.pyo
 *.pyd
 .DS_Store
-project.db
+instance/project.db
 .idea/
 TODO.md
 
