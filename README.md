@@ -1,8 +1,6 @@
 **Student Number: 22123589** \
 **Website URL:** 
 
-![Website Screenshot](static/images/home-page-screenshot.png)
-
 # My Personal Website
 Welcome to my personal website built using Python and Flask!
 
