@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # configurations
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:////Users/lylali/Coding/advanced-python-projects/my_website/instance/project.db'
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
 
 
