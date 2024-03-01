@@ -1,4 +1,6 @@
 import os
+import io
+import json
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, current_app, abort, flash
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
@@ -13,7 +15,6 @@ from hashlib import md5
 import smtplib
 from email.mime.text import MIMEText
 
-
 from forms import PostForm, RegistrationForm, LoginForm, CommentForm, RequestResetForm, ResetPasswordForm
 
 # initialize app
@@ -21,7 +22,8 @@ app = Flask(__name__)
 
 # configurations
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DB_URI')
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:////Users/lylali/Coding/advanced-python-projects/my_website/instance/project.db'
+
 
 
 # initialize class 
@@ -348,6 +350,48 @@ def reset_token(token):
             return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
 
+def get_static_file(path):
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    return os.path.join(site_root, path)
+
+def get_static_json(path):
+    return json.load(open(get_static_file(path)))
+
+def order_projects_by_weight(projects):
+    try:
+        return int(projects['weight'])
+    except KeyError:
+        return 0
+
+@app.route('/projects')
+def get_projects():
+    data = get_static_json("static/projects/projects.json")['projects']
+    data.sort(key=order_projects_by_weight, reverse=True)
+
+    tag = request.args.get('tags')
+    if tag is not None:
+        data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
+
+    return render_template('projects.html', projects=data, tag=tag)
+
+@app.route('/projects/<title>')
+def project(title):
+    projects = get_static_json("static/projects/projects.json")['projects']
+
+    in_project = next((p for p in projects if p['link'] == title), None)
+
+    if in_project is None:
+        return render_template('404.html'), 404
+    else:
+        selected = in_project
+
+    # load html if the json file doesn't contain a description
+    if 'description' not in selected:
+        path = "projects"
+        selected['description'] = io.open(get_static_file(
+            'static/%s/%s/%s.html' % (path, selected['link'], selected['link'])), "r", encoding="utf-8").read()
+    return render_template('project.html', project=selected)
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

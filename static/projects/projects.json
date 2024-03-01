@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "name": "Blog Web App",
+      "link": "project-1",
+      "date": "December 2023",
+      "short": "This project features user management with registration, login, and password recovery. Users can customize profiles, including uploading profile pictures with automatic resizing. The application supports various post types, allowing users to create, update, and delete posts. ",
+      "github": "https://github.com/lylali/flask-blog-app.git",
+      "weight": 1,
+      "tags": [
+        "Python",
+        "Web",
+        "Flask"
+      ],
+      "photos": [
+        "/static/projects/project-1/img.jpg"
+      ],
+      "videos": [
+        "https://www.youtube.com/embed/UfXIDMDmyL8?si=Ewqn1bqxW4kp0shQ"
+      ]
+    },
+    {
+      "name": "AI generated E-discharge Summary",
+      "link": "project-2",
+      "date": "December 2023 - Present",
+      "short": "A short description of the project ...",
+      "weight": 1,
+      "tags": [
+        "Python",
+        "Web",
+        "Flask",
+        "AI"
+      ],
+      "photos": [
+        "/static/projects/project-2/img.jpg",
+        "/static/projects/project-2/img-2.jpg"
+      ]
+    }
+    
+  ]
+}
